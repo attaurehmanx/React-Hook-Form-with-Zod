@@ -111,7 +111,7 @@ const Zodforms = () => {
       </div>
       <div>
         <button 
-        className={`text-lg rounded-md ${isSubmitting? 'opacity-50 cursor-none': 'opacity-100'} bg-blue-5git00 text-white px-4 py-2 mb-5`}
+        className={`text-lg rounded-md ${isSubmitting? 'opacity-50 cursor-none': 'opacity-100'} bg-blue-500 text-white px-4 py-2 mb-5`}
         type="submit"
         disabled={isSubmitting}
         >Submit</button>
