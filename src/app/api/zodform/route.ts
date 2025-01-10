@@ -1,7 +1,7 @@
 import { Zodformschema } from "@/lib/Zodschema";
-import { error } from "console";
+
 import { NextResponse } from "next/server";
-import { object, ZodSchema } from "zod";
+
 export async function POST (request: Request){
     const data = await request.json();
    

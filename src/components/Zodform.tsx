@@ -1,17 +1,17 @@
 'use client'
 import React from 'react'
-import { z } from 'zod'
+
 import { useForm, SubmitHandler } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { Zodformschema, Inputs } from '@/lib/Zodschema'
 import { useRef } from 'react'
 
 
-const zodform = () => {
+const Zodforms = () => {
 
     const resetform = useRef <HTMLFormElement>(null)
     // Reacthook form 
-    const {register, handleSubmit,setError, getValues, formState:{ errors,isSubmitting}} = useForm<Inputs>({resolver: zodResolver(Zodformschema)})
+    const {register, handleSubmit,setError, formState:{ errors,isSubmitting}} = useForm<Inputs>({resolver: zodResolver(Zodformschema)})
 
     // to send data to server
     const onSubmit:SubmitHandler<Inputs> = async (data: Inputs) =>{
@@ -111,7 +111,7 @@ const zodform = () => {
       </div>
       <div>
         <button 
-        className={`text-lg rounded-md ${isSubmitting? 'opacity-50 cursor-none': 'opacity-100'} bg-blue-500 text-white px-4 py-2 mb-5`}
+        className={`text-lg rounded-md ${isSubmitting? 'opacity-50 cursor-none': 'opacity-100'} bg-blue-5git00 text-white px-4 py-2 mb-5`}
         type="submit"
         disabled={isSubmitting}
         >Submit</button>
@@ -123,4 +123,4 @@ const zodform = () => {
   )
 }
 
-export default zodform
+export default Zodforms
